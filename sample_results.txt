@@ -1,0 +1,92 @@
+
+Sample Results:
+
+Naive Bayes Results:
+Training                 Test_with_stopwords   Test_without_stopwords
+0.9913606911447084       0.9602510460251046       0.9581589958158996
+
+
+Perceptron Results:
+W/ iterations: 5 and learning_rate: 0.01:
+Training                 Test_with_stopwords   Test_without_stopwords     Test_without_stopwords_on_new_perceptron
+0.8401727861771058       0.8242677824267782       0.8765690376569037                 0.8786610878661087
+
+W/ iterations: 5 and learning_rate: 0.05:
+Training                 Test_with_stopwords   Test_without_stopwords     Test_without_stopwords_on_new_perceptron
+0.8250539956803455       0.7907949790794979       0.8807531380753139                 0.8723849372384938
+
+W/ iterations: 5 and learning_rate: 0.1:
+Training                 Test_with_stopwords   Test_without_stopwords     Test_without_stopwords_on_new_perceptron
+0.8444924406047516       0.8242677824267782       0.8870292887029289                 0.8577405857740585
+
+W/ iterations: 5 and learning_rate: 0.5:
+Training                 Test_with_stopwords   Test_without_stopwords     Test_without_stopwords_on_new_perceptron
+0.7796976241900648       0.7719665271966527       0.8723849372384938                 0.8870292887029289
+
+W/ iterations: 10 and learning_rate: 0.01:
+Training                 Test_with_stopwords   Test_without_stopwords     Test_without_stopwords_on_new_perceptron
+0.896328293736501        0.8347280334728033       0.8849372384937239                  0.899581589958159
+
+W/ iterations: 10 and learning_rate: 0.05:
+Training                 Test_with_stopwords   Test_without_stopwords     Test_without_stopwords_on_new_perceptron
+0.8639308855291576       0.8200836820083682        0.895397489539749                  0.893305439330544
+
+W/ iterations: 10 and learning_rate: 0.1:
+Training                 Test_with_stopwords   Test_without_stopwords     Test_without_stopwords_on_new_perceptron
+0.838012958963283        0.801255230125523       0.8765690376569037                 0.8640167364016736
+
+W/ iterations: 10 and learning_rate: 0.5:
+Training                 Test_with_stopwords   Test_without_stopwords     Test_without_stopwords_on_new_perceptron
+0.8704103671706264       0.8430962343096234       0.8807531380753139                 0.8807531380753139
+
+W/ iterations: 15 and learning_rate: 0.01:
+Training                 Test_with_stopwords   Test_without_stopwords     Test_without_stopwords_on_new_perceptron
+0.9157667386609071       0.8347280334728033       0.8786610878661087                  0.899581589958159
+
+W/ iterations: 15 and learning_rate: 0.05:
+Training                 Test_with_stopwords   Test_without_stopwords     Test_without_stopwords_on_new_perceptron
+0.9222462203023758       0.8493723849372385        0.899581589958159                  0.891213389121339
+
+W/ iterations: 15 and learning_rate: 0.1:
+Training                 Test_with_stopwords   Test_without_stopwords     Test_without_stopwords_on_new_perceptron
+0.9546436285097192       0.8765690376569037        0.899581589958159                 0.8744769874476988
+
+W/ iterations: 15 and learning_rate: 0.5:
+Training                 Test_with_stopwords   Test_without_stopwords     Test_without_stopwords_on_new_perceptron
+0.9395248380129589       0.8535564853556485       0.8870292887029289                  0.891213389121339
+
+W/ iterations: 20 and learning_rate: 0.01:
+Training                 Test_with_stopwords   Test_without_stopwords     Test_without_stopwords_on_new_perceptron
+0.9503239740820735       0.8451882845188284       0.9121338912133892                 0.9037656903765691
+
+W/ iterations: 20 and learning_rate: 0.05:
+Training                 Test_with_stopwords   Test_without_stopwords     Test_without_stopwords_on_new_perceptron
+0.9460043196544277       0.8577405857740585        0.893305439330544                  0.899581589958159
+
+W/ iterations: 20 and learning_rate: 0.1:
+Training                 Test_with_stopwords   Test_without_stopwords     Test_without_stopwords_on_new_perceptron
+0.9632829373650108       0.8723849372384938       0.9037656903765691                 0.8723849372384938
+
+W/ iterations: 20 and learning_rate: 0.5:
+Training                 Test_with_stopwords   Test_without_stopwords     Test_without_stopwords_on_new_perceptron
+0.937365010799136        0.8493723849372385        0.891213389121339                 0.8807531380753139
+
+W/ iterations: 100 and learning_rate: 0.01:
+Training                 Test_with_stopwords   Test_without_stopwords     Test_without_stopwords_on_new_perceptron
+1.0                      0.8661087866108786       0.9100418410041841                 0.9037656903765691
+
+W/ iterations: 100 and learning_rate: 0.05:
+Training                 Test_with_stopwords   Test_without_stopwords     Test_without_stopwords_on_new_perceptron
+1.0                      0.8807531380753139       0.9079497907949791                 0.8870292887029289
+
+W/ iterations: 100 and learning_rate: 0.1:
+Training                 Test_with_stopwords   Test_without_stopwords     Test_without_stopwords_on_new_perceptron
+1.0                      0.8786610878661087        0.899581589958159                 0.8849372384937239
+
+W/ iterations: 100 and learning_rate: 0.5:
+Training                 Test_with_stopwords   Test_without_stopwords     Test_without_stopwords_on_new_perceptron
+1.0                      0.8723849372384938       0.9016736401673641                 0.8828451882845189
+
+NOTE: Results will vary everytime we run the program because within the training process, it randomly selects documents 
+from spam, since there is a lack of spam documents, so the randomly selected documents will effect the training process 
+and weights of the perceptron. More on this below in the Additional Notes.

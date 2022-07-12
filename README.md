@@ -1,6 +1,6 @@
 # Spam or Ham 📧
 
-Spam or Ham is a program that detects whether an email is considered spam or "ham". The dataset for this project was provided from [UCI Machine Learning SMS Spam Collection Dataset](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset). This repository contains implementations of two different machine learning models a naive Bayes classifier and a neural network with the purpose of determining which model would be a better fit for the task. The nerual network is a simple perceptron model with a binary step activation function. From my implementations, I determined the naive Bayes classifier generalizes to the data set a lot better than the simple neural network, because in the [sample_results.txt](https://github.com/JonathanCen/Spam-or-Ham/blob/main/sample_results.txt) we can observe that when the neural network trains for 100 iterations it is able to achieve 100% accuracy on the training data, but doesn't perform as well on the test data in comparison to the naive bayes model.
+Spam or Ham is a program that detects whether an email is considered spam or "ham". The dataset for this project was provided from [UCI Machine Learning SMS Spam Collection Dataset](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset). This repository contains implementations of two different machine learning models a naive Bayes classifier and a neural network with the purpose of determining which model would be a better fit for the task. The neural network is a simple perceptron model with a binary step activation function. From my implementations, I determined the naive Bayes classifier generalizes to the data set a lot better than the simple neural network because in the [sample_results.txt](https://github.com/JonathanCen/Spam-or-Ham/blob/main/sample_results.txt) we can observe that when the neural network trains for 100 iterations it is able to achieve 100% accuracy on the training data but doesn't perform as well on the test data in comparison to the naive Bayes model.
 
 ## Getting Started
 
@@ -23,7 +23,7 @@ Navigate to the cloned repository:
 
     cd Spam-or-Ham
 
-To run the naive bayes text classifier:
+To run the naive Bayes text classifier:
 
     python3 Naive_Bayes_Text_Classifier.py
 
@@ -43,17 +43,17 @@ To run the neural network text classifier:
 
 Training:
 
-- I initialized the weights of to small random numbers ranging between 0.0 to 1.0.
+- I initialized the weights to small random numbers ranging from 0.0 to 1.0.
 - Bias: I hard set the bias with a weight of 5 (did not update this value as I trained).
 - Features: The features are the bag of words of that one document I am currently training on (not the entire training set).
-- When I train my perceptron, I oscillate between training Ham & Spam documents (training: ham, spam, ham, spam, ...), and when I run out of spam docs, I randomly select spam documents within the training to continue training the model. I did this because there are unequal amount of documents, and I found that the weights of my perceptron was heavily dominated by the ham documents, so when I tested my model, it would correctly predict ham documents 100% of the time but for spam documents it will have an accuracy of 0%, so I found this as a great solution to solve the problem of the inadequate spam documents.
+- When I train my perception, I oscillate between training Ham & Spam documents (training: ham, spam, ham, spam, ...), and when I run out of spam docs, I randomly select spam documents within the training to continue training the model. I did this because there are unequal amount of documents, and I found that the weights of my perceptron were heavily dominated by the ham documents, so when I tested my model, it would correctly predict ham documents 100% of the time but for spam documents, it will have an accuracy of 0%, so I found this as a great solution to solve the problem of the inadequate spam documents.
 - Bias: I hard set the bias feature to 1 with a weight of 5.
 - The activation function I used:
   - if feature_vector \* weight_vector > 0, then document is spam (1) else document is ham (-1)
 
 Testing:
 
-- Bias: Set to the same value as training
+- Bias: Set to the same value as the training
 - Features: Same as the training (bag of words of the current document I am viewing)
 
 ## Contributing
